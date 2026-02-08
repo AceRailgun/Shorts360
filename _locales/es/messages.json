@@ -1,0 +1,35 @@
+{
+  "welcome_title": { "message": "Gracias por descargar" },
+  "welcome_subtitle": { "message": "Shorts360 — Mejorador de YouTube Shorts" },
+  "rate_button": { "message": "¡Califica con 5 estrellas!" },
+  "changelog_title": { "message": "Registro de cambios" },
+  "support_title": { "message": "Apoya mi trabajo con Crypto" },
+
+  "changelog_v11_title": { "message": "v1.1 Actualización de velocidad" },
+  "changelog_v11_item1": { "message": "Se agregó la sección de registro de cambios en la página de bienvenida." },
+  "changelog_v11_item2": { "message": "Se actualizaron los enlaces: “Califica con 5 estrellas” ahora apunta directamente a la página de la extensión en lugar de la lista de extensiones instaladas." },
+  "changelog_v11_item3": { "message": "Se añadió el botón de velocidad en la interfaz de Shorts." },
+  "changelog_v11_item4": { "message": "Se añadió un botón para cambiar del reproductor normal de YouTube a Shorts." },
+  "changelog_v11_item5": { "message": "Atajos de teclado: Shift + > para aumentar la velocidad de reproducción en YouTube Shorts." },
+  "changelog_v11_item6": { "message": "Atajos de teclado: Shift + < para disminuir la velocidad de reproducción en YouTube Shorts." },
+  "changelog_v11_item7": { "message": "Mensaje superpuesto: muestra la velocidad de reproducción actual cuando se cambia mediante atajos de teclado." },
+  "changelog_v11_item8": { "message": "Se añadió soporte para idioma español." },
+
+
+  "changelog_v10_title": { "message": "v1.0 Lanzamiento inicial" },
+  "changelog_v10_item1": { "message": "Se añadió un botón para rotar Shorts, ocultar la interfaz y cambiar de Shorts al reproductor normal de YouTube." },
+  "changelog_v10_item2": { "message": "Atajos de teclado: R (rotar), S (cambiar video), O (ocultar interfaz)." },
+  "changelog_v10_item3": { "message": "Ventana emergente con consejos sobre atajos de teclado." }, 
+
+  
+  "popup_enjoy": { "message": "¿Disfrutando Shorts360?" },
+  "popup_rate": { "message": "¡Califica con 5 estrellas!" },
+  "popup_support": { "message": "Apoya mi trabajo" },
+
+
+
+  "manifest_description": {
+    "message": "YouTube Shorts360: agrega un botón para rotar, ocultar la interfaz, cambiar a video o la velocidad en YouTube Shorts."
+  }
+
+}

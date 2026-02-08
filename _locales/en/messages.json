@@ -1,0 +1,34 @@
+{
+  "welcome_title": { "message": "Thank You For Downloading" },
+  "welcome_subtitle": { "message": "Shorts360 — YouTube Shorts Enhancer" },
+  "rate_button": { "message": "Rate 5 Stars!" },
+  "changelog_title": { "message": "Changelog" },
+  "support_title": { "message": "Support my work with Crypto" },
+
+  "changelog_v11_title": { "message": "v1.1 Speed Update" },
+  "changelog_v11_item1": { "message": "Added Changelog section to the welcome page." },
+  "changelog_v11_item2": { "message": "Updated links: “Rate 5 stars” now points directly to the extension’s page instead of the installed extensions list." },
+  "changelog_v11_item3": { "message": "Added speed button to the Shorts interface." },
+  "changelog_v11_item4": { "message": "Added button to switch from normal YouTube player to Shorts." },
+  "changelog_v11_item5": { "message": "Keyboard shortcuts: Shift + > to increase playback speed in YouTube Shorts." },
+  "changelog_v11_item6": { "message": "Keyboard shortcuts: Shift + < to decrease playback speed in YouTube Shorts." },
+  "changelog_v11_item7": { "message": "Overlay message: shows current playback speed when changed via keyboard shortcuts." },
+  "changelog_v11_item8": { "message": "Added Spanish language support." },
+
+  
+  "changelog_v10_title": { "message": "v1.0 Initial release" },
+  "changelog_v10_item1": { "message": "Added button to rotate Shorts, hide the interface, and switch from Shorts to normal YouTube player." },
+  "changelog_v10_item2": { "message": "Keyboard shortcuts: R (rotate), S (switch video), O (hide UI)." },
+  "changelog_v10_item3": { "message": "Pop-up window with tips about keyboard shortcuts." },
+
+
+  "popup_enjoy": { "message": "Enjoying Shorts360?" },
+  "popup_rate": { "message": "Rate 5 Stars!" },
+  "popup_support": { "message": "Support my work" }, 
+
+  
+
+  "manifest_description": {
+   "message": "YouTube Shorts360: Adds a button to rotate shorts, hide UI, switch to a video, and control playback speed in YouTube Shorts."}
+
+}

@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Shorts360",
+  "description": "__MSG_manifest_description__",
+  "version": "1.1",
+  "default_locale": "en",
+  "options_page": "welcome.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "assets/icon48.png",
+      "128": "assets/icon128.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/rotate-icon.png",
+        "assets/open-icon.png",
+        "assets/overlay-icon.png",
+        "assets/speed-icon.png",
+        "assets/check-icon.png",
+        "assets/welcome.html"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+  
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Shorts360 - Popup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+      background: #1e1e1e;
+      color: white;
+      font-size: 12px;
+      width: 300px; 
+    }
+    a {
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .popup-box {
+      border: 2px solid #1c70b4;
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 12px;
+      text-align: center;
+    }
+    .popup-box h2 {
+      color: #1c70b4;
+      margin-top: 0;
+      font-size: 14px;
+    }
+    .popup-box img {
+      width: 100%;
+      border-radius: 4px;
+    }
+
+
+    .popup-box {
+  border: 2px solid #1c70b4;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+.image-box {
+  padding: 0; /* sin padding para que el borde toque la imagen */
+}
+
+.image-box img {
+  display: block;       /* elimina espacios extra */
+  width: 100%;          /* ocupa todo el ancho del div */
+  height: auto;
+  border-radius: 8px;   /* mismo radio que el borde del div */
+}
+
+  </style>
+</head>
+<!DOCTYPE html>
+<html>
+  <body>
+    <!-- Caja con borde azul para la imagen -->
+    <div class="popup-box image-box">
+      <img src="assets/popupexample.png" alt="Ejemplo">
+    </div>
+
+    <!-- Caja con borde azul para el texto -->
+    <div class="popup-box">
+      <div style="font-size:14px; margin-top:10px; font-weight:bold;">
+        <span id="popupEnjoy"></span><br>
+        <a id="popupRate" href="https://chromewebstore.google.com/detail/shorts360/pimihdlpddeacanfihagefdbbaenlpdg"
+           target="_blank"
+           style="color:#4993cf;">
+        </a>
+      </div>
+
+      <div style="margin-top:10px;">
+        <a id="popupSupport" href="welcome.html"
+           target="_blank"
+           style="color:#3fb35a;">
+        </a>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
+</html>
