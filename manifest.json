@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Shorts360",
+  "name": "Youtube Shorts360",
   "description": "__MSG_manifest_description__",
-  "version": "1.1",
+  "version": "1.1.1",
   "default_locale": "en",
   "options_page": "welcome.html",
   "background": {

@@ -262,6 +262,23 @@ if (rotation === 180) {
 // BTN360 
 
 
+// Funcion para cambios en url 
+
+let lastUrl = location.href;
+
+function handleUrlChange(url) {
+  const video = document.querySelector("video");
+  if (!video) return;
+
+  if (url.includes("/shorts/")) {
+    const savedRate = sessionStorage.getItem("shortsPlaybackRate") || "1";
+    video.playbackRate = parseFloat(savedRate);
+  } 
+}
+
+// Funcion para cambios en url 
+
+
 //Observer y eventos 
 // Observer
 const observer = new MutationObserver(() => {
@@ -284,7 +301,18 @@ const observer = new MutationObserver(() => {
     shiftActionButtons();
     insertSpeedButton();
   }
+  // v1.1.1 bug fixed 
+  const currentUrl = location.href;
+    if (currentUrl !== lastUrl) {
+    lastUrl = currentUrl;
+    handleUrlChange(currentUrl);
+   }
 });
+
+observer.observe(document.body, { childList: true, subtree: true });
+handleUrlChange(location.href);
+  // v1.1.1 bug fixed 
+
 observer.observe(document.body, { childList: true, subtree: true });
 document.addEventListener("fullscreenchange", () => {
   if (isManuallyRotated) return;
@@ -580,7 +608,7 @@ document.addEventListener("keydown", (event) => {
       toast.classList.add("show");
       clearTimeout(hideTimer);
       hideTimer = setTimeout(() => {
-        toast.classList.remove("show"); // fade-out
+        toast.classList.remove("show"); 
       }, 6000);
     });
   }
@@ -597,39 +625,49 @@ document.addEventListener("keydown", (event) => {
 
 
 
+
+
+
 // BOTON DE VELOCIDAD 
 function isShortsPage() {
   return window.location.pathname.startsWith("/shorts/");
 }
 
+function setShortsRate(rate) {
+  const video = document.querySelector("video");
+  if (!video) return;
+  video.playbackRate = rate;
+  sessionStorage.setItem("shortsPlaybackRate", rate);
+  updateChecks(video);
+  showSpeedOverlay(rate);
+  console.log("Shorts Speed:", rate);
+}
+
+
 function cycleSpeed() {
   if (!isShortsPage()) return;
   const video = document.querySelector("video");
   if (!video) return;
+
   let newRate;
-  if (video.playbackRate === 0.5) newRate = 0.75;
-  else if (video.playbackRate === 0.75) newRate = 1;
-  else if (video.playbackRate === 1) newRate = 1.25;
-  else if (video.playbackRate === 1.25) newRate = 1.5;
-  else if (video.playbackRate === 1.5) newRate = 1.75;
-  else if (video.playbackRate === 1.75) newRate = 2;
-  else newRate = 2; 
+  switch (video.playbackRate) {
+    case 0.5: newRate = 0.75; break;
+    case 0.75: newRate = 1; break;
+    case 1: newRate = 1.25; break;
+    case 1.25: newRate = 1.5; break;
+    case 1.5: newRate = 1.75; break;
+    case 1.75: newRate = 2; break;
+    default: newRate = 2;
+  }
+  setShortsRate(newRate);
 
   video.playbackRate = newRate;
 sessionStorage.setItem("shortsPlaybackRate", newRate);
 updateChecks(video);
 showSpeedOverlay(newRate); 
 console.log("Speed:", newRate);
-
 }
 
-// Detectar shift + > 
-document.addEventListener("keydown", (e) => {
-  if (e.shiftKey && e.key === ">") {
-    cycleSpeed();
-  }
-});
-// Detectar shift + > 
 
 // Menos velocidad 
 function cycleSpeedDown() {
@@ -638,13 +676,16 @@ function cycleSpeedDown() {
   if (!video) return;
 
   let newRate;
-  if (video.playbackRate === 2) newRate = 1.75;
-  else if (video.playbackRate === 1.75) newRate = 1.5;
-  else if (video.playbackRate === 1.5) newRate = 1.25;
-  else if (video.playbackRate === 1.25) newRate = 1;
-  else if (video.playbackRate === 1) newRate = 0.75;
-  else if (video.playbackRate === 0.75) newRate = 0.5;
-  else newRate = 0.5; 
+  switch (video.playbackRate) {
+    case 2: newRate = 1.75; break;
+    case 1.75: newRate = 1.5; break;
+    case 1.5: newRate = 1.25; break;
+    case 1.25: newRate = 1; break;
+    case 1: newRate = 0.75; break;
+    case 0.75: newRate = 0.5; break;
+    default: newRate = 0.5;
+  }
+  setShortsRate(newRate);
 
   video.playbackRate = newRate;
 sessionStorage.setItem("shortsPlaybackRate", newRate);
@@ -653,13 +694,22 @@ showSpeedOverlay(newRate);
 console.log("Speed:", newRate);
 }
 
-// Detectar shift + < 
+
+// Detectar shift + < > 
+
+document.addEventListener("keydown", (e) => {
+  if (e.shiftKey && e.key === ">") {
+    cycleSpeed();
+  }
+});
+
 document.addEventListener("keydown", (e) => {
   if (e.shiftKey && e.key === "<") {
     cycleSpeedDown();
   }
 });
-// Detectar shift + < 
+
+// Detectar shift + < > 
 
 // BTN Speed
 function updateChecks(video) {
@@ -677,12 +727,11 @@ function updateChecks(video) {
 
 function insertSpeedButton() {
   const savedRate = sessionStorage.getItem("shortsPlaybackRate");
-  if (savedRate) {
+  if (savedRate && isShortsPage()) {
     const video = document.querySelector("video");
-    if (video) {
-      video.playbackRate = parseFloat(savedRate);
-    }
+    if (video) video.playbackRate = parseFloat(savedRate);
   }
+
 
   const overlay = document.querySelector("ytd-reel-player-overlay-renderer");
   if (!overlay) return;
@@ -837,9 +886,9 @@ function insertSpeedButton() {
   });
 }
 
+
 // Overlay de velocidad 
 function showSpeedOverlay(rate) {
-  // Si ya existe un overlay, lo eliminamos para evitar duplicados
   let existing = document.querySelector(".speed-overlay");
   if (existing) existing.remove();
 

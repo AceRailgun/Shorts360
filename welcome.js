@@ -5,6 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("changelogTitle").textContent = chrome.i18n.getMessage("changelog_title");
   document.getElementById("supportTitle").textContent = chrome.i18n.getMessage("support_title");
 
+  // Changelog v1.1.1
+  document.getElementById("changelogV111Title").textContent = chrome.i18n.getMessage("changelog_v111_title");
+  document.getElementById("changelogV111Item1").textContent = chrome.i18n.getMessage("changelog_v111_item1");
+  document.getElementById("changelogV111Item2").textContent = chrome.i18n.getMessage("changelog_v111_item2");
+
   // Changelog v1.1
   document.getElementById("changelogV11Title").textContent = chrome.i18n.getMessage("changelog_v11_title");
   document.getElementById("changelogV11Item1").textContent = chrome.i18n.getMessage("changelog_v11_item1");

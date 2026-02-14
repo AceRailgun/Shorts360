@@ -5,6 +5,14 @@
   "changelog_title": { "message": "Registro de cambios" },
   "support_title": { "message": "Apoya mi trabajo con Crypto" },
 
+
+
+
+  "changelog_v111_title": { "message": "v1.1.1 Corrección de errores de velocidad" },
+  "changelog_v111_item1": { "message": "Se solucionó un error que causaba que la velocidad de reproducción de los videos se sobreescribiera con la velocidad configurada en Shorts, impidiendo modificarla desde los controles de YouTube." },
+  "changelog_v111_item2": { "message": "El nombre de la extensión se actualizó a YouTube Shorts360 para mayor claridad."},
+
+  
   "changelog_v11_title": { "message": "v1.1 Actualización de velocidad" },
   "changelog_v11_item1": { "message": "Se agregó la sección de registro de cambios en la página de bienvenida." },
   "changelog_v11_item2": { "message": "Se actualizaron los enlaces: “Califica con 5 estrellas” ahora apunta directamente a la página de la extensión en lugar de la lista de extensiones instaladas." },

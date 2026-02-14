@@ -5,6 +5,14 @@
   "changelog_title": { "message": "Changelog" },
   "support_title": { "message": "Support my work with Crypto" },
 
+
+
+
+  "changelog_v111_title": { "message": "v1.1.1 - Speed Bug Fix" },
+  "changelog_v111_item1": { "message": "Fixed a bug where the playback speed of videos was being overridden by the Shorts speed setting, preventing changes from YouTube’s native controls." },
+  "changelog_v111_item2": { "message": "Updated extension name to YouTube Shorts360 for better clarity."},
+
+
   "changelog_v11_title": { "message": "v1.1 Speed Update" },
   "changelog_v11_item1": { "message": "Added Changelog section to the welcome page." },
   "changelog_v11_item2": { "message": "Updated links: “Rate 5 stars” now points directly to the extension’s page instead of the installed extensions list." },

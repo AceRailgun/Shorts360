@@ -1,4 +1,4 @@
-# Shorts360 — YouTube Shorts Enhancer
+# Youtube Shorts360 — YouTube Shorts Enhancer
 🇪🇸 Español
 
 Shorts360 es una extensión para navegadores basados en Chromium que añade controles extra y atajos de teclado para mejorar la experiencia al ver YouTube Shorts. 
@@ -64,6 +64,13 @@ If you are typing in an input field, shortcuts are disabled to avoid conflicts.
 ![Example](assets/example.png)
 
 ## Changelog
+
+
+
+### v1.1.1 - Speed Bug Fix 
+- Fixed a bug where the playback speed of videos was being overridden by the Shorts speed setting, preventing changes from YouTube’s native controls.
+- Updated extension name to YouTube Shorts360 for better clarity.
+
 
 ### v1.1 Speed Update 
 - Added Changelog section to the welcome page.
